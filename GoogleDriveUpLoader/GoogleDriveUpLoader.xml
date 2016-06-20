@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="GoogleDriveUpLoader.widget.GoogleDriveUpLoader" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>GoogleDriveUpLoader</name>
+    <description>The description of this widget.</description>
+
+    <icon></icon>
+
+    <properties>
+
+        <property key="main" type="entity">
+            <caption>User Object</caption>
+            <category>Core</category>
+            <description>User Object</description>
+        </property>
+        <property key="token" type="attribute" entityProperty="main">
+            <caption>User Token</caption>
+            <category>Core</category>
+            <description>REST Token</description>
+            <attributeTypes>
+                <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="objStore" type="attribute">
+            <caption>file ID</caption>
+            <category>Core</category>
+            <description>Attribute to store file ID</description>
+            <attributeTypes>
+                <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="mfToExecute" type="microflow" required="true" defaultValue="">
+            <caption>Copy Microflow</caption>
+            <category>Core</category>
+            <description>The microflow to execute if file is picked from the user's google drive.</description>
+            <returnType type="Boolean"></returnType>
+        </property>
+        <property key="mfToExecuteCopy" type="microflow" required="true" defaultValue="">
+            <caption>Insert Microflow</caption>
+            <category>Core</category>
+            <description>The microflow to execute if the file is uploaded from user's local drive.</description>
+            <returnType type="Boolean"></returnType>
+        </property>
+        <property key="mfToRetrieveAppID" type="microflow" required="true" defaultValue="">
+            <caption>API Key and App ID Microflow</caption>
+            <category>Core</category>
+            <description>The microflow to execute to get the appID constant and API Key.</description>
+            <returnType type="String"></returnType>
+        </property>
+
+<!--
+        <property key="" type="string" required="false" defaultValue="">
+            <caption>Google API</caption>
+            <category>Core</category>
+            <description>The API developerkey from the Google Developer Console.</description>
+        </property>
+        <property key="googleAppId" type="string" required="false" defaultValue="">
+            <caption>Google App Id</caption>
+            <category>Core</category>
+            <description>The App Id from the Google Developer Console.</description>
+        </property>
+-->
+
+    </properties>
+</widget>
+

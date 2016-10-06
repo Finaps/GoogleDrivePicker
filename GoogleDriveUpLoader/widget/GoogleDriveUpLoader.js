@@ -170,7 +170,7 @@ define([
                         params: {
                             applyto: "selection",
                             actionname: this.mfToExecuteCopy,
-                            guids: [this._conextObj.getGUID()]
+                            guids: [this._conextObj.getGuid()]
                         },
                         callback: function (obj) {
                             console.log("sent to backend");
@@ -184,7 +184,7 @@ define([
                         params: {
                             applyto: "selection",
                             actionname: this.mfToExecute,
-                            guids: [this._conextObj.getGUID()]
+                            guids: [this._conextObj.getGuid()]
                         },
                         callback: function (obj) {
                             console.log("sent to backend");
